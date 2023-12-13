@@ -1,0 +1,13 @@
+NFL=1
+CONTRA=2
+NOVA_LINHA=3
+ESPACO=4
+ACAO=5
+QUANTIDADE=6
+JARDAS=7
+FIM=8
+'@'=2
+'\n'=3
+' '=4
+'jardas'=7
+'Fim de jogo'=8

@@ -1,76 +1,88 @@
-// Generated from Gramatica2.g4 by ANTLR 4.13.1
+// Generated from Football.g4 by ANTLR 4.13.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link Gramatica2Listener},
+ * This class provides an empty implementation of {@link FootballListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
 @SuppressWarnings("CheckReturnValue")
-public class Gramatica2BaseListener implements Gramatica2Listener {
+public class FootballBaseListener implements FootballListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterRaiz_programa(Gramatica2Parser.Raiz_programaContext ctx) { }
+	@Override public void enterRaiz_programa(FootballParser.Raiz_programaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitRaiz_programa(Gramatica2Parser.Raiz_programaContext ctx) { }
+	@Override public void exitRaiz_programa(FootballParser.Raiz_programaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterJogo(Gramatica2Parser.JogoContext ctx) { }
+	@Override public void enterJogo(FootballParser.JogoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitJogo(Gramatica2Parser.JogoContext ctx) { }
+	@Override public void exitJogo(FootballParser.JogoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclaracao(Gramatica2Parser.DeclaracaoContext ctx) { }
+	@Override public void enterInicio(FootballParser.InicioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclaracao(Gramatica2Parser.DeclaracaoContext ctx) { }
+	@Override public void exitInicio(FootballParser.InicioContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDeclaracao2(Gramatica2Parser.Declaracao2Context ctx) { }
+	@Override public void enterJogada(FootballParser.JogadaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDeclaracao2(Gramatica2Parser.Declaracao2Context ctx) { }
+	@Override public void exitJogada(FootballParser.JogadaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTime(Gramatica2Parser.TimeContext ctx) { }
+	@Override public void enterFim(FootballParser.FimContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTime(Gramatica2Parser.TimeContext ctx) { }
+	@Override public void exitFim(FootballParser.FimContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTime(FootballParser.TimeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTime(FootballParser.TimeContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

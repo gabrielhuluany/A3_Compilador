@@ -8,32 +8,30 @@ import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
 public class MeuCompilador {
     public static void main(String[] args) {
-
         // Ler o texto a ser convertido transformando em Stream de "char"
-        //CharStream entrada = CharStreams.fromString("Bears @ Packers");
-        String filePath = "arquivo.txt";
+        String filePath = "src/Input.txt";
         CharStream entrada = null;
         try {
             entrada = CharStreams.fromPath(Path.of(filePath), StandardCharsets.UTF_8);
         } catch (IOException e) {
-            System.out.println("Erro de acesso ao arquivo");
+            System.out.println("Erro de acesso ao arquivo: ");
             e.printStackTrace();
         }
-        // Passar a Strem lida para o Lexer
-        Gramatica2Lexer lexer = new Gramatica2Lexer(entrada);
+        // Passar a Stream lida para o Lexer
+        FootballLexer lexer = new FootballLexer(entrada);
 
-        // Passando o resultado da analise Lexica para o processador de Tokens
+        // Passando o resultado da análise léxica para o processador de Tokens
         CommonTokenStream  tokens = new CommonTokenStream(lexer);
-        // Passando os tokens para o parser 
-        Gramatica2Parser parser = new Gramatica2Parser(tokens);
-        // Pegar o ponto raiz da gramatica
-        Gramatica2Parser.Raiz_programaContext arvore = parser.raiz_programa();
-        // Imprimir a arvore geradora do texto sendo analisado
+        // Passando os tokens para o Parser
+        FootballParser parser = new FootballParser(tokens);
+        // Pegar o ponto raíz da gramática
+        FootballParser.Raiz_programaContext arvore = parser.raiz_programa();
+        // Imprimir a árvore geradora do texto sendo analisado
         System.out.println(arvore.toStringTree(parser));
 
-        // "Caminha" pela arvore disparando os metodos do Listener
-        MeuGramatica2Listener meuListener = new MeuGramatica2Listener();
+        // "Caminha" pela árvore disparando os métodos do Listener
+        MeuFootballListener meuListener = new MeuFootballListener();
         ParseTreeWalker parseTreeWalker = new ParseTreeWalker();
-        parseTreeWalker.walk(meuListener, arvore);        
+        parseTreeWalker.walk(meuListener, arvore);
     }
 }
